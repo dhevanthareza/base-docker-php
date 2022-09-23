@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  php-apache:
+    container_name: digitepp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 4000:80
+    volumes:
+      - ./:/var/www/html/
+      - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+  service-mysql:
+    container_name: mysqlnyadigitepp
+    build: 
+      context: .
+      dockerfile: DockerfileMysql
