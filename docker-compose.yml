@@ -2,12 +2,12 @@ version: '3.1'
 
 services:
   php-apache:
-    container_name: digitepp
+    container_name: base-docker
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 4000:80
+      - 4005:80
     volumes:
       - ./:/var/www/html/
       - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
