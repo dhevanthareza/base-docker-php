@@ -10,4 +10,5 @@ services:
       - 4005:80
     volumes:
       - ./:/var/www/html/
-      - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./apache/conf/default.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./apache/logs:/var/log/apache2
